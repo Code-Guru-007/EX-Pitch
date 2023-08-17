@@ -183,6 +183,10 @@ export const Title = styled.span`
 export const SmallTitle = styled.span`
     color: ${props => props.color || "white"};
     font-size: 18px;
+    font-family: Darker Grotesque;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; 
     @media (min-width: 800px) {
         font-size: 25px;
     };
