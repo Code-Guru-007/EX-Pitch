@@ -35,7 +35,8 @@ import ShareIcon from "../../assets/svg/share.svg"
 import CopyIcon from "../../assets/svg/document-duplicate.svg"
 import InformationIcon from "../../assets/svg/information-circle.svg"
 import ChevronIcon from "../../assets/svg/chevron-down.svg"
-
+import HeartIcon from "../../assets/svg/heart.svg"
+import ChatIcon from "../../assets/svg/chat-bubble-oval-left.svg"
 
 import Avatar1 from '../../assets/avatar/1.jpg'
 import Avatar2 from '../../assets/avatar/2.jpg'
@@ -345,6 +346,23 @@ export default function GetStart() {
                     >
                       FitMeNow
                     </FitMeNow>
+                    <DContainer
+                      display="flex"
+                      gap="20px"
+                      >
+                      <DContainer
+                          display="flex"
+                        >
+                        <CustomSVG src={HeartIcon} width="20px" height="20px"></CustomSVG>
+                        <FormTitle color='white' fontsize="18px">456</FormTitle>
+                      </DContainer>
+                      <DContainer
+                        display="flex"
+                      >
+                        <CustomSVG src={ChatIcon} width="20px" height="20px"></CustomSVG>
+                        <FormTitle color='white' fontsize="18px">1k</FormTitle>
+                      </DContainer>
+                    </DContainer>
                   </PitchForm>
                   <DContainer>
                     <DContainer

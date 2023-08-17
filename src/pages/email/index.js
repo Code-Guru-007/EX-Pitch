@@ -14,7 +14,11 @@ import {
     ColorBgContainer,
     CustomSVG,
     SvgBgContainer,
-    SmallTitle
+    SmallTitle,
+    Label,
+    Required,
+    EmailInput,
+    Button
 } from './styled'
 
 import SpeakerWaveIcon from "../../assets/svg/speaker-wave.svg"
@@ -22,6 +26,7 @@ import PlayIcon from "../../assets/svg/play-circle.svg"
 import MoreIcon from "../../assets/svg/ellipsis-horizontal.svg"
 import HeartIcon from "../../assets/svg/heart.svg"
 import ChatIcon from "../../assets/svg/chat-bubble-oval-left.svg"
+import RightArrowIcon from "../../assets/svg/arrow-right.svg"
 
 export default function Email(){
     return(
@@ -122,10 +127,29 @@ export default function Email(){
                 <DContainer
                     display="flex"
                     alignitems="center"
+                    justifycontent="center"
                     padding="0 5% 0 5%"
                 >
                     <PitchForm>
                         <SmallTitle color="black">Please enter your email address to which we will send the results</SmallTitle>
+                        <Label>Your email address <Required>*</Required> </Label>
+                        <EmailInput></EmailInput>
+                        <DContainer
+                            display="flex"
+                            justifycontent="flex-end"
+                            width="100%"
+                        >
+                            <Button>
+                                <DContainer
+                                    display="flex"
+                                    justifycontent="center"
+                                    alignitems="center"
+                                >
+                                    Uploader
+                                    <CustomSVG src={RightArrowIcon} alt={RightArrowIcon}></CustomSVG>
+                                </DContainer>
+                            </Button>
+                        </DContainer>
                     </PitchForm>
                 </DContainer>
             </F>

@@ -14,15 +14,21 @@ export const ColorBgContainer = styled.div`
     padding-bottom: 100px;
     border: 1px solid transparent;
     border-radius: 24px 0 0 24px;
+    @media (max-width: 1024px){
+        border-radius: 24px 24px 0 0;
+    }
 `;
 export const SvgBgContainer = styled.div`
     background-image: url(${BackgroundSVG});
     background-repeat: no-repeat;
-    background-size: 50vw;
+    background-size: 100%;
     border: 1px solid transparent;
     border-radius: 24px 0 0 0;
     border-right: none;
     border-bottom: none;
+    @media (max-width: 1024px){
+        border-radius: 24px 24px 0 0;
+    }
 `
 // export const TitleTag = styled.div`
 //     text-align: center;
@@ -56,8 +62,11 @@ export const PitchForm = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 32px;
     padding: ${props => props.padding};
+    @media (max-width: 1024px){
+        margin: 100px 50px;
+    }
 `
 export const Player = styled.div`
     color: white;
@@ -173,9 +182,9 @@ export const Title = styled.span`
 `
 export const SmallTitle = styled.span`
     color: ${props => props.color || "white"};
-    font-size: 22px;
+    font-size: 18px;
     @media (min-width: 800px) {
-        font-size: 27px;
+        font-size: 25px;
     };
     @media (min-width: 1400px) {
         font-size: 32px;
@@ -266,6 +275,7 @@ export const Grade = styled.div`
 `
 
 export const DContainer = styled.div`
+    width: ${props => props.width};
     padding: ${props => props.padding};
     margin: ${props => props.margin};
     display: ${props => props.display || "block"};
@@ -285,3 +295,58 @@ export const DContainer = styled.div`
 //     height: ${props => props.height || '50px'};
 //     border-radius: 50%;
 // `
+
+export const Label = styled.span`
+    font-size: 14px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: black;
+`
+export const Required = styled.span`
+    font-size: 14px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: #E71561;
+`
+export const EmailInput = styled.input`
+    height: 42px;
+    padding: 9px 13px;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 6px;
+    border: 1px solid var(--gray-300, #D1D5DB);
+    background: var(--white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    font-family: DM Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    &:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+    }
+`
+export const Button = styled.div`
+    display: flex;
+    padding: 12px 26px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+    border: 1px solid var(--primary, #E71561);
+    opacity: 0.3;
+    background: var(--primary, #E71561);
+    color: white;
+    &:hover {
+        opacity: 0.7;
+    }
+    &:active {
+        opacity: 0.4;
+    }
+`
