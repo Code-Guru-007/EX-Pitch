@@ -14,7 +14,7 @@ import GetStart from "./pages/getstart";
 import Email from "./pages/email";
 import Uploading from "./pages/uploading";
 import Processing from "./pages/processing";
-// import Results from "./pages/results";
+import Results from "./pages/results";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         <Route path="/email" element={<Email />} />
         <Route path="/uploading" element={<Uploading />} />
         <Route path="/processing" element={<Processing />} />
-        {/* <Route path="/results" element={<Results />} /> */}
+        <Route path="/results" element={<Results />} />
         <Route path="/features" element={<Features />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/extension" element={<Extension />} />
